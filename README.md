@@ -2,21 +2,23 @@
 
 一个使用 **HTML、CSS 和原生 JavaScript** 制作的单页个人主页。无需 Node.js、npm 或后端；保存文件后，双击 `index.html` 即可在浏览器打开。页面包含个人介绍、项目、经历、技能和联系方式，并适配电脑、平板与手机。
 
-GitHub 仓库：[yorke9/yorke9.github.io](https://github.com/yorke9/yorke9.github.io)。发布后主页地址为 [https://yorke9.github.io/](https://yorke9.github.io/)。
+GitHub 仓库：[yorke9/yorke9.github.io](https://github.com/yorke9/yorke9.github.io)。在线主页：[https://yorke9.github.io/](https://yorke9.github.io/)。目前 GitHub Pages 已从 `main` 分支的 `/(root)` 发布。
 
-> 当前姓名、经历、项目和联系链接均为演示内容。公开发布前，请替换成自己的真实信息。
+> 主页已公开。经历、前三个项目和部分联系信息仍是演示内容，请在分享给他人前替换为真实信息，不要把示例经历当作已完成的工作。
 
 ## 项目结构
 
 ```text
 personal-homepage/
 ├── index.html          # 页面结构与个人文字
+├── 404.html            # GitHub Pages 找不到页面时的返回入口
 ├── css/
 │   └── style.css       # 颜色、排版、响应式布局和动画
 ├── js/
 │   └── main.js         # 导航菜单、滚动状态和进入动画
 ├── images/
-│   └── README.md       # 添加图片的方法
+│   ├── README.md       # 添加图片的方法
+│   └── favicon.svg     # 网站的小图标
 ├── projects/
 │   └── index.html      # 四个可打开的项目说明页
 ├── README.md           # 使用与 Git 学习说明
@@ -41,13 +43,28 @@ personal-homepage/
 2. **颜色：**打开 `css/style.css`，修改开头 `:root` 中的 `--bg-color`、`--text-color`、`--secondary-text`、`--accent-color` 等变量。
 3. **交互：**打开 `js/main.js`。它负责手机菜单、平滑滚动、当前导航、返回顶部及进入动画。改动后刷新浏览器查看效果。
 4. **图片：**将图片放入 `images/`，在 HTML 中写如 `<img src="images/profile.jpg" alt="头像描述">`。添加头像时可替换首页的 `.hero-visual` 区域，并在 CSS 中调整布局。
-5. **图标与年份：**有 favicon 后，按 `index.html` 的 `<head>` 中注释添加图标链接；年份写在 Hero 和 Footer 中，可以直接搜索 `2026` 修改。
+5. **图标与年份：**替换 `images/favicon.svg` 可以更改浏览器小图标；年份写在 Hero 和 Footer 中，可以直接搜索 `2026` 修改。
 
 项目和项目说明页目前仍是示例内容，并非真实作品。项目页可以正常打开；GitHub 地址尚未提供，因此没有设置会导致 404 的假链接。
 
 ## Git 基础操作
 
-在终端中先进入 **`personal-homepage` 文件夹**，再执行下面的命令。第一次使用 Git 之前，可能需要设置用户名和邮箱；它们会写入提交记录，与网页上的联系邮箱可以不同。
+下面的 `git init`、`git remote add` 示例用于学习如何从头创建一个**新的空仓库**。本网站的 GitHub 仓库已经有提交记录；继续维护这个在线网站时，请先克隆仓库（见下一节），不要在这份无 `.git` 的本地副本里直接初始化后强行推送。第一次使用 Git 之前，可能需要设置用户名和邮箱；它们会写入提交记录，与网页上的联系邮箱可以不同。
+
+### 继续维护现有网站
+
+在你选定的目录克隆现有仓库。以后编辑克隆目录中的文件，或把这份本地副本的修改复制到克隆目录对应位置，再提交：
+
+```bash
+git clone https://github.com/yorke9/yorke9.github.io.git
+cd yorke9.github.io
+git status
+git add .
+git commit -m "Refine personal homepage"
+git push
+```
+
+`git clone` 会取得线上完整历史并自动配置远程地址。不要把 `your@email.com` 当成 Git 提交邮箱；它只是网页里的示例内容。也可以在 GitHub 仓库直接使用网页编辑器修改文件。
 
 ### 第一次提交
 
@@ -73,7 +90,7 @@ git commit -m "Update homepage"
 
 ### 上传到 GitHub
 
-先在 GitHub 创建一个**空仓库**，例如 `personal-homepage`。创建时不要勾选自动添加 README，避免第一次推送时出现历史冲突。复制该仓库的 HTTPS 地址，在 `personal-homepage` 文件夹执行：
+以下是**新项目**上传到新空仓库的教学示例；不能直接用于当前已有历史的 `yorke9.github.io` 仓库。先在 GitHub 创建一个**空仓库**，例如 `personal-homepage`。创建时不要勾选自动添加 README，避免第一次推送时出现历史冲突。复制该仓库的 HTTPS 地址，在新项目文件夹执行：
 
 ```bash
 git remote add origin 仓库地址
@@ -97,13 +114,15 @@ git push
 
 ## 如何部署到 GitHub Pages
 
-推荐**在 `personal-homepage` 文件夹内执行 `git init` 并上传**，让 GitHub 仓库根目录直接包含 `index.html`、`css/`、`js/`、`projects/`。如果你已经把外层的“个人主页”文件夹整体上传为仓库根目录，外层也提供了一个 `index.html` 入口，会自动转到 `personal-homepage/`。请确保把这个外层入口一并上传；单独上传子文件夹而没有根目录入口，Pages 仍可能显示 404。
+当前仓库已经按推荐结构发布：仓库根目录直接包含 `index.html`、`css/`、`js/`、`projects/` 和 `404.html`。以下是将来新建另一个 GitHub Pages 网站时可参考的步骤。
 
 1. 在 GitHub 打开该仓库，点击 **Settings**。
 2. 在左侧点击 **Pages**。
 3. 在 **Build and deployment** 的 **Source** 选择 **Deploy from a branch**。
 4. 在 **Branch** 选择 `main`，文件夹选择 **`/(root)`**，然后点击 **Save**。
 5. 等待 GitHub 完成部署。之后可在 Pages 设置页点击 **Visit site**。普通项目仓库的网址通常是 `https://你的用户名.github.io/仓库名/`。
+
+本站的仓库名恰好是 `yorke9.github.io`，所以主页地址直接是 `https://yorke9.github.io/`。`404.html` 为输错地址提供返回首页与项目笔记的入口。
 
 由于样式和脚本都使用相对路径，部署在普通项目仓库的子路径下也可以正常加载。日后修改网站，提交并 `git push` 后，Pages 会重新部署。官方步骤可参考 [GitHub Pages 发布来源说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
 
@@ -116,6 +135,14 @@ git push
 5. 如果主页能打开但某个项目页面打不开，检查 `projects/index.html` 是否已上传；四个项目按钮使用的都是相对路径。
 
 更多排查细节见 [GitHub 官方 404 排查说明](https://docs.github.com/en/pages/getting-started-with-github-pages/troubleshooting-404-errors-for-github-pages-sites)。
+
+## 设计参考与这次改进
+
+- [Anna Linh Vu 的静态作品集](https://github.com/annalinhvu/annalinhvu.github.io)：学习用简洁的项目说明、明确的真实演示链接来呈现作品。本站保留四个示例方向，不为尚未完成的研究虚构外部链接。
+- [Shaikha Alkhadhr 的学术主页](https://github.com/ShaikhaTheGreen/ShaikhaTheGreen.github.io)：参考轻量静态结构和专门的 `404.html`，让输错网址的人能回到主要内容。
+- [Jord8061 的学术主页](https://github.com/Jord8061/Jord8061.github.io)：参考桌面与手机都清晰的导航组织。本站仍保持单页、无框架、可直接打开 `index.html` 的做法。
+
+本次新增页首阅读进度线、短篇研究宣言、项目笔记目录、网站图标及 404 页面。进度线复用已有的滚动处理，页面不加载额外库或远程字体。
 
 ## 推荐阅读顺序
 

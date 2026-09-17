@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal website of Yorke, focusing on public administration, digital governance, public policy and personal projects.">
     <meta name="theme-color" content="#f6f4ee">
+    <link rel="canonical" href="https://yorke9.github.io/">
     <title>Yorke | Personal Website</title>
-    <!-- 有自己的图标后，可将 images/favicon.ico 放入 images/，再在这里添加 favicon 链接。 -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
   </head>
@@ -33,6 +34,7 @@
           <a href="#contact">Contact</a>
         </nav>
       </div>
+      <div class="reading-progress" aria-hidden="true"></div>
     </header>
 
     <main id="main-content" tabindex="-1">
@@ -71,6 +73,19 @@
         </div>
         <div class="container hero-footnote"><span>Curiosity, with a purpose.</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
       </section>
+
+      <!-- 这段可作为简短的个人研究宣言，直接修改下方文字即可。 -->
+      <aside class="focus-note" aria-label="Current interests">
+        <div class="container focus-note-inner">
+          <p class="focus-note-kicker">OPEN NOTE <span>001 / 2026</span></p>
+          <p class="focus-note-title">Public questions,<br><em>human scale.</em></p>
+          <ol class="focus-note-topics">
+            <li><span>01</span> Public institutions</li>
+            <li><span>02</span> Everyday experience</li>
+            <li><span>03</span> Technology in context</li>
+          </ol>
+        </div>
+      </aside>
 
       <section class="section" id="about" aria-labelledby="about-title">
         <div class="container section-layout">
@@ -131,11 +146,14 @@
       <section class="section" id="experience" aria-labelledby="experience-title">
         <div class="container section-layout">
           <div class="section-heading" data-reveal><p class="section-number">03 / JOURNEY SO FAR</p><h2 class="section-title" id="experience-title">Experience<span>.</span></h2></div>
-          <div class="experience-list" data-reveal>
-            <!-- 以下经历为示例，请换成自己的真实经历。 -->
-            <article class="experience-item"><time datetime="2026">2026</time><div><h3>Research Project</h3><p>Exploring questions in public administration through reading, analysis and collaboration.</p></div><span>Public Administration</span></article>
-            <article class="experience-item"><time datetime="2025">2025</time><div><h3>Government Internship</h3><p>Observing how public services are delivered and how policy meets daily practice.</p></div><span>Public Sector</span></article>
-            <article class="experience-item"><time datetime="2024">2024</time><div><h3>Social Research Project</h3><p>Learning to listen carefully through interviews and on-site observation.</p></div><span>Field Research</span></article>
+          <div class="experience-content" data-reveal>
+            <p class="section-note">Illustrative milestones for now. Replace these entries with the work and experiences you want to share.</p>
+            <div class="experience-list">
+              <!-- 以下经历为示例，请换成自己的真实经历。 -->
+              <article class="experience-item"><time datetime="2026">2026</time><div><h3>Research Project</h3><p>Exploring questions in public administration through reading, analysis and collaboration.</p></div><span>Public Administration</span></article>
+              <article class="experience-item"><time datetime="2025">2025</time><div><h3>Government Internship</h3><p>Observing how public services are delivered and how policy meets daily practice.</p></div><span>Public Sector</span></article>
+              <article class="experience-item"><time datetime="2024">2024</time><div><h3>Social Research Project</h3><p>Learning to listen carefully through interviews and on-site observation.</p></div><span>Field Research</span></article>
+            </div>
           </div>
         </div>
       </section>
