@@ -4,6 +4,7 @@ const navigation = document.querySelector(".site-nav");
 const navigationLinks = [...navigation.querySelectorAll('a[href^="#"]')];
 const sections = [...document.querySelectorAll("main section[id]")];
 const backToTopButton = document.querySelector(".back-to-top");
+const readingProgress = document.querySelector(".reading-progress");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 // 手机端菜单：按钮状态与菜单是否展开始终同步。
@@ -74,6 +75,10 @@ function updateScrollState() {
     else link.removeAttribute("aria-current");
   }
   backToTopButton.hidden = window.scrollY < 500;
+  // 页首细线标出阅读位置，不增加额外依赖或动画库。
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight)) : 0;
+  readingProgress.style.transform = `scaleX(${progress})`;
   scrollFrameRequested = false;
 }
 
