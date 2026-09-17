@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Yorke logo">
+  <rect width="64" height="64" fill="#222720"/>
+  <text x="10" y="48" fill="#f6f4ee" font-family="Georgia, serif" font-size="48">Y</text>
+  <circle cx="51" cy="46" r="5" fill="#b9c9b1"/>
+</svg>
