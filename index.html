@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Yorke, focusing on public administration, digital governance, public policy and personal projects.">
+    <meta name="theme-color" content="#f6f4ee">
+    <title>Yorke | Personal Website</title>
+    <!-- 有自己的图标后，可将 images/favicon.ico 放入 images/，再在这里添加 favicon 链接。 -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-logo" href="#home" aria-label="Yorke, back to home">
+          <span class="logo-mark">Y<span>.</span></span>
+          <span class="logo-caption">A personal space</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#home" class="is-active" aria-current="location">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <!-- =========================
+           PERSONAL CONTENT
+           在这里修改个人信息：姓名、介绍、项目、经历、技能、联系方式。
+           需要整体改色时，请编辑 css/style.css 开头的 :root。
+      ========================= -->
+
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL WEBSITE <span class="eyebrow-divider">/</span> 2026</p>
+            <h1 id="hero-title">Yorke<span class="title-period">.</span></h1>
+            <p class="hero-role">Public Administration Student <span>·</span> Researcher <span>·</span> Explorer</p>
+            <p class="hero-intro">I am interested in public administration, digital governance, public policy and the interaction between technology and society.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">View Projects <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="#contact">Contact Me <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <!-- 右侧是纯 CSS 构图，不需要图片，也不会影响本地双击打开。 -->
+          <div class="hero-visual" aria-hidden="true" data-reveal>
+            <div class="visual-top"><span>NOTES ON THE EVERYDAY</span><span>NO. 001</span></div>
+            <div class="visual-stage">
+              <span class="visual-cross visual-cross-one">+</span>
+              <span class="visual-cross visual-cross-two">+</span>
+              <span class="visual-ring"></span>
+              <span class="visual-disc"></span>
+              <span class="visual-line"></span>
+              <span class="visual-word">Observe<br>in order<br>to understand.</span>
+            </div>
+            <div class="visual-bottom"><span>IDEAS / PEOPLE / SYSTEMS</span><span>01 — 04</span></div>
+          </div>
+        </div>
+        <div class="container hero-footnote"><span>Curiosity, with a purpose.</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container section-layout">
+          <div class="section-heading" data-reveal><p class="section-number">01 / INTRODUCTION</p><h2 class="section-title" id="about-title">About<span>.</span></h2></div>
+          <div class="about-content" data-reveal>
+            <p class="about-lead">I study how public institutions meet a changing world.</p>
+            <p>I'm a student of public administration who enjoys asking how institutions work and how they can work better. My interests sit at the intersection of public policy, digital governance, and everyday social life. I read widely, follow new technologies with curiosity, and try to connect ideas from research with problems people actually face. Through coursework, fieldwork, writing, and small coding experiments, I am learning to turn careful observation into useful questions and clear communication. This site is a place to collect that work, reflect on what I learn, and share projects as they grow.</p>
+            <dl class="personal-details">
+              <div><dt>Location</dt><dd>China</dd></div>
+              <div><dt>Field</dt><dd>Public Administration</dd></div>
+              <div><dt>Interests</dt><dd>Digital Governance / Public Policy / Technology &amp; Society</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-layout section-intro" data-reveal>
+            <div class="section-heading"><p class="section-number">02 / SELECTED WORK</p><h2 class="section-title" id="projects-title">Projects<span>.</span></h2></div>
+            <p class="section-description">A growing collection of research, observations and experiments. These sample entries open project notes that you can replace with your own work.</p>
+          </div>
+
+          <!-- 将下面四个示例项目的标题、年份、类别、介绍和链接替换成你的内容。 -->
+          <ol class="project-list">
+            <li class="project-item" data-reveal>
+              <article class="project-inner">
+                <span class="project-index">01</span>
+                <div class="project-body"><div class="project-meta"><span>RESEARCH</span><span>2026</span></div><h3 class="project-title">Digital Governance Research</h3><p>Exploring how digital technologies reshape public administration, government services and the relationship between institutions and citizens.</p><ul class="project-tags" aria-label="Topics"><li>Digital Governance</li><li>Public Administration</li></ul></div>
+                <div class="project-links"><a href="projects/index.html#digital-governance" aria-label="View Digital Governance Research project">View Project ↗</a><span class="project-link-pending">GitHub · Add link</span></div>
+              </article>
+            </li>
+            <li class="project-item" data-reveal>
+              <article class="project-inner">
+                <span class="project-index">02</span>
+                <div class="project-body"><div class="project-meta"><span>POLICY</span><span>2025</span></div><h3 class="project-title">Public Policy Analysis</h3><p>Studying policy design, the choice of policy tools and the practical challenges of turning public decisions into action.</p><ul class="project-tags" aria-label="Topics"><li>Policy Design</li><li>Analysis</li></ul></div>
+                <div class="project-links"><a href="projects/index.html#public-policy" aria-label="View Public Policy Analysis project">View Project ↗</a><span class="project-link-pending">GitHub · Add link</span></div>
+              </article>
+            </li>
+            <li class="project-item" data-reveal>
+              <article class="project-inner">
+                <span class="project-index">03</span>
+                <div class="project-body"><div class="project-meta"><span>FIELDWORK</span><span>2025</span></div><h3 class="project-title">Field Research</h3><p>Collecting insights through social surveys, interviews and field observation, with attention to everyday public experiences.</p><ul class="project-tags" aria-label="Topics"><li>Interviews</li><li>Social Research</li></ul></div>
+                <div class="project-links"><a href="projects/index.html#field-research" aria-label="View Field Research project">View Project ↗</a><span class="project-link-pending">GitHub · Add link</span></div>
+              </article>
+            </li>
+            <li class="project-item" data-reveal>
+              <article class="project-inner">
+                <span class="project-index">04</span>
+                <div class="project-body"><div class="project-meta"><span>PERSONAL</span><span>2026</span></div><h3 class="project-title">Personal Coding Projects</h3><p>Documenting the process of learning HTML, CSS, JavaScript and Git by building small, useful things from scratch.</p><ul class="project-tags" aria-label="Topics"><li>Web</li><li>Learning in Public</li></ul></div>
+                <div class="project-links"><a href="projects/index.html#coding-projects" aria-label="View Personal Coding Projects">View Project ↗</a><a href="https://github.com/yorke9/yorke9.github.io" target="_blank" rel="noopener noreferrer" aria-label="Personal homepage source code on GitHub">GitHub ↗</a></div>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container section-layout">
+          <div class="section-heading" data-reveal><p class="section-number">03 / JOURNEY SO FAR</p><h2 class="section-title" id="experience-title">Experience<span>.</span></h2></div>
+          <div class="experience-list" data-reveal>
+            <!-- 以下经历为示例，请换成自己的真实经历。 -->
+            <article class="experience-item"><time datetime="2026">2026</time><div><h3>Research Project</h3><p>Exploring questions in public administration through reading, analysis and collaboration.</p></div><span>Public Administration</span></article>
+            <article class="experience-item"><time datetime="2025">2025</time><div><h3>Government Internship</h3><p>Observing how public services are delivered and how policy meets daily practice.</p></div><span>Public Sector</span></article>
+            <article class="experience-item"><time datetime="2024">2024</time><div><h3>Social Research Project</h3><p>Learning to listen carefully through interviews and on-site observation.</p></div><span>Field Research</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-layout section-intro" data-reveal><div class="section-heading"><p class="section-number">04 / WHAT I USE</p><h2 class="section-title" id="skills-title">Skills<span>.</span></h2></div><p class="section-description">Methods and tools I use to ask better questions, communicate clearly and make ideas tangible.</p></div>
+          <div class="skills-grid" data-reveal>
+            <section class="skill-group" aria-labelledby="research-skills"><h3 id="research-skills">Research</h3><ul><li>Literature Review</li><li>Qualitative Research</li><li>Interview</li><li>Case Study</li><li>Policy Analysis</li></ul></section>
+            <section class="skill-group" aria-labelledby="writing-skills"><h3 id="writing-skills">Writing</h3><ul><li>Academic Writing</li><li>Research Report</li><li>Policy Analysis</li></ul></section>
+            <section class="skill-group" aria-labelledby="data-skills"><h3 id="data-skills">Data</h3><ul><li>Excel</li><li>Stata</li><li>Basic Data Analysis</li></ul></section>
+            <section class="skill-group" aria-labelledby="technology-skills"><h3 id="technology-skills">Technology</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>GitHub</li></ul></section>
+            <section class="skill-group" aria-labelledby="tools-skills"><h3 id="tools-skills">Tools</h3><ul><li>VS Code</li><li>Git</li><li>GitHub</li><li>ChatGPT</li><li>Codex</li></ul></section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container section-layout">
+          <div class="section-heading" data-reveal><p class="section-number">05 / SAY HELLO</p><h2 class="section-title" id="contact-title">Contact<span>.</span></h2></div>
+          <div class="contact-content" data-reveal>
+            <p class="contact-lead">Let's start a conversation.</p>
+            <p>Feel free to reach out if you'd like to discuss research, projects or ideas.</p>
+            <!-- 下面的邮箱及社交主页均为占位链接，发布前请替换。 -->
+            <ul class="contact-list">
+              <li><span>Email</span><a href="mailto:your@email.com">your@email.com <span aria-hidden="true">↗</span></a></li>
+              <li><span>GitHub</span><a href="https://github.com/yorke9" target="_blank" rel="noopener noreferrer">github.com/yorke9 <span aria-hidden="true">↗</span></a></li>
+              <li><span>LinkedIn</span><span class="contact-placeholder">Add your LinkedIn profile URL</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Yorke</span><span>Built with HTML, CSS and JavaScript.</span><a href="#home">Back to top ↑</a></div></footer>
+    <button class="back-to-top" type="button" aria-label="Back to top" hidden>↑</button>
+  </body>
+</html>
